@@ -4,4 +4,7 @@ device driver poll example
 # Run
 $ source run.sh
 
-Then follow the instructions.
+After script execution, a user space C program will be polling the device driver.
+Need to provide data from console to break the poll like :
+echo pollbreaker > /dev/chrdrv
+
