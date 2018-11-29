@@ -1,7 +1,7 @@
 # device_io
 device driver poll example
 
-Run:
+# Run
 $ source run.sh
 
-Than follow the instructions.
+Then follow the instructions.
