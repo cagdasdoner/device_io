@@ -119,9 +119,9 @@ static unsigned int device_poll(struct file *filp, poll_table *wait)
 {
 	unsigned int ret = 0;
 	printk(KERN_INFO "chrdrv poll\n");
-    poll_wait(filp, &waitqueue, wait);
+	poll_wait(filp, &waitqueue, wait);
 	/* Wait if driver's message buffer is empty. */
-    if (strlen(message)) {
+	if (strlen(message)) {
 		ret |= POLLIN | POLLRDNORM;
 	}
 
