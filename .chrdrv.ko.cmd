@@ -1,0 +1,1 @@
+cmd_/home/cagdas/examples/device_io/chrdrv.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/cagdas/examples/device_io/chrdrv.ko /home/cagdas/examples/device_io/chrdrv.o /home/cagdas/examples/device_io/chrdrv.mod.o ;  true
