@@ -5,7 +5,6 @@
 #include <sys/poll.h>
  
 #define BUFFER_LENGTH 256
-#define TIMEOUT 30
 static char receive[BUFFER_LENGTH];
 
 int main(){
@@ -20,7 +19,8 @@ int main(){
 
    pofd.events = POLLIN;
    pofd.revents = 0;
-   ret = poll(&pofd, 1, TIMEOUT * 1000);
+   printf("Waiting for data...\n");
+   ret = poll(&pofd, 1, -1);
 
    if (ret < 0) {
       printf("Poll failed with : %d\n", ret);
